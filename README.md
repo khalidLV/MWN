@@ -1,6 +1,5 @@
 ## Installation
-laravel 8.1
-tailwindcss 
+laravel 8.1 
 breeze
 livewire
 
