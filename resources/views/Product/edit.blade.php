@@ -18,20 +18,19 @@
             <div class="card-body">
                 <form action="{{ route('Product.store') }}" method="post">
                     @csrf
-    
                     <div class="mb-4">
-                        <label for="name" class="block text-gray-700 text-sm font-bold">Name:</label>
-                        <input type="text" id="name" name="name" class="form-input mt-1 block w-full" required>
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" class="form-control" value="{{ $product->name }}" required>
                     </div>
-    
+
                     <div class="mb-4">
-                        <label for="description" class="block text-gray-700 text-sm font-bold">Description:</label>
-                        <textarea id="description" name="description" class="form-textarea mt-1 block w-full" required></textarea>
+                        <label for="description">Description:</label>
+                        <textarea id="description" name="description" class="form-control" required>{{ $product->description }}</textarea>
                     </div>
-    
+
                     <div class="mb-4">
-                        <label for="price" class="block text-gray-700 text-sm font-bold">Price:</label>
-                        <input type="number" id="Price" name="Price" class="form-input mt-1 block w-full" required>
+                        <label for="Price">Price:</label>
+                        <input type="number" id="Price" name="Price" class="form-control" value="{{ $product->Price }}" required>
                     </div>
                     
     
