@@ -13,7 +13,7 @@
                     <tr>
                         <th scope="col">ID</th>
                         <th scope="col">Name</th>
-                        <th scope="col">Description</th>
+                        <th scope="col">Price</th>
                         <th scope="col"></th>
                     </tr>
                   </thead>
@@ -22,7 +22,7 @@
                     <tr lass="overdue-row">
                         <td>{{ $product->id }}</td>
                         <td>{{ $product->name }}</td>
-                        <td>{{ $product->description }}</td>
+                        <td>{{ $product->Price }}</td>
                         <td>
                         </td>
                 </tr>

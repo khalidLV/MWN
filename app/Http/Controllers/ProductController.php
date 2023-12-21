@@ -28,13 +28,13 @@ class ProductController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'description' => 'required|string',
-            'Price' => 'required|string|max:9',
+            'Price' => 'required|string|max:1000000',
         ]);
 
         Product::create([
             'name' => $request->input('name'),
             'description' => $request->input('description'),
-            'Price' => $request->input('price'),
+            'Price' => $request->input('Price'),
         ]);
 
         return redirect()->route('Product.index')->with('success', 'Product created successfully');

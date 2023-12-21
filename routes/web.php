@@ -23,7 +23,7 @@ Route::view('profile', 'profile')
 ->name('profile');
 require __DIR__.'/auth.php';
 
-Route::group(['middleware' => ['auth', 'language'] ], function () {
+Route::group(['middleware' => ['auth'] ], function () {
     Route::resource('Product',App\Http\Controllers\ProductController::class);
 
  
