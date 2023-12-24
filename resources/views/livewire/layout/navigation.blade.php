@@ -30,9 +30,27 @@ new class extends Component
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" wire:navigate>
-                        {{ __('Welcome Page') }}
-                    </x-nav-link>
+
+                    <x-dropdown-link :href="route('dashboard')" class="flex items-center  {{ request()->routeIs('dashboard') ? 'bg-night-400 text-black' : 'hover:bg-night-600 hover:text-black text-night-400 ' }} " wire:navigate>
+                        {{ __('Welcome Page') }}                    </x-dropdown-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+                    <x-dropdown-link :href="route('dashboard')" class="flex items-center  {{ request()->routeIs('dashboard') ? 'bg-night-400 text-black' : 'hover:bg-night-600 hover:text-black text-night-400 ' }} " wire:navigate>
+                        {{ __('Empty Page') }}                    </x-dropdown-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+                    <x-dropdown-link :href="route('dashboard')" class="flex items-center  {{ request()->routeIs('dashboard') ? 'bg-night-400 text-black' : 'hover:bg-night-600 hover:text-black text-night-400 ' }} " wire:navigate>
+                        {{ __('Empty Page') }}                    </x-dropdown-link>
+                </div>
+
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+
+                    <x-dropdown-link :href="route('dashboard')" class="flex items-center  {{ request()->routeIs('dashboard') ? 'bg-night-400 text-black' : 'hover:bg-night-600 hover:text-black text-night-400 ' }} " wire:navigate>
+                        {{ __('Empty Page') }}                    </x-dropdown-link>
                 </div>
             </div>
 
