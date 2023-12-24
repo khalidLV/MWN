@@ -46,6 +46,25 @@ class ProductController extends Controller
         return view('Product.edit', compact('product'));
     }
 
+    public function update(Request $request, $id)
+{
+    $request->validate([
+        'name' => 'required|string|max:255',
+        'description' => 'required|string',
+        'Price' => 'required|string|max:1000000',
+    ]);
+
+    $product = Product::find($id);
+
+    $product->update([
+        'name' => $request->input('name'),
+        'description' => $request->input('description'),
+        'Price' => $request->input('Price'),
+    ]);
+
+    return redirect()->route('Product.index')->with('success', 'Product updated successfully!');
+}
+
     public function destroy($id)
     {
         $product = Product::findOrFail($id);
